@@ -4,9 +4,11 @@ on:
   workflow_dispatch:
     inputs:
       input-1:
+        description: "manual input for ip1"
         type: string
         required: true
       input-2:
+        description: "manual input for ip2"
         type: string
         default: "abcd"
 
