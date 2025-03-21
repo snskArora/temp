@@ -13,6 +13,8 @@ on:
 jobs:
   job-re-1:
     runs-on: ubuntu-latest
+    outputs:
+      job-ip1: ${{ steps.st-1.outputs.ip1 }}
     steps:
       - id: st-1
         run: |
@@ -21,4 +23,12 @@ jobs:
       - name: st2
         run: |
           echo "-- ${{ steps.st-1.outputs.ip1 }}"
+
+  job-re-2:
+    needs: [job-re-1]
+    runs-on: ubuntu-latest
+    steps:
+    - name: inputs
+      run: |
+          echo "${{ needs.job-re-1.outputs.job-ip1 }} --"
           
