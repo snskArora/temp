@@ -2,15 +2,16 @@ name: workflow-1
 
 on:
   push:
-    # branches:
-    # - '*'
-    branches-ignore:
-    - 'test'
+    branches:
+    - '*'
 
 
 jobs:
   job-1:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        env: ["env1", "env2"]
     steps:
       - name: step1
         run: | 
