@@ -9,10 +9,10 @@ on:
 jobs:
   job-1:
     runs-on: ubuntu-latest
-    environment: ${{ matrix.env }}
-    strategy:
-      matrix:
-        env: ["env1", "env2"]
+    # environment: ${{ matrix.env }}
+    # strategy:
+    #   matrix:
+    #     env: ["env1", "env2"]
     steps:
       - name: step1
         run: | 
@@ -20,3 +20,8 @@ jobs:
       # - name: test
       #   run: |
       #     echo "${{ matrix.regions }}"
+  job2:
+    uses: snskArora/temp/reusable-wflow.yaml@test
+    with:
+      input-1: "test1"
+      input-2: "test2"

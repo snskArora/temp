@@ -1,0 +1,24 @@
+name: Testing reusable workflow
+
+on:
+  workflow_call:
+    inputs:
+      input-1:
+        type: string
+        required: true
+      input-2:
+        type: string
+        deafult: "abcd"
+
+jobs:
+  job-re-1:
+    runs-on: ubuntu-latest
+    steps:
+      - id: st-1
+        run: |
+          echo "-- ${{ inputs.input-1 }}"
+          echo "ip1=${{ inputs.input-1 }}" >> $GITHUB_OUTPUT
+      - name: st2
+        run: |
+          echo "-- ${{ steps.st-1.outputs.ip1 }}"
+          
