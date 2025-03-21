@@ -21,7 +21,7 @@ jobs:
       #   run: |
       #     echo "${{ matrix.regions }}"
   job2:
-    uses: snskArora/temp/reusable-wflow.yaml@test
+    uses: snskArora/temp/.github/workflows/reusable-wflow.yaml@test
     with:
       input-1: "test1"
       input-2: "test2"
