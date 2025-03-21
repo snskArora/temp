@@ -8,7 +8,7 @@ on:
     - 'test'
 
 
-job:
+jobs:
   job-1:
     runs-on: ubuntu-latest
     steps:
