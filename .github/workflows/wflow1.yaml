@@ -4,8 +4,8 @@ on:
   push:
     branches:
     - '*'
-    branches-ignore:
-    - 'test'
+    # branches-ignore:
+    # - 'test'
 
 
 jobs:
