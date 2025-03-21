@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: step1
         run: | 
-          echo "${{ matrix.env }} --- ${{ vars.project_id }}"
+          echo "${{ matrix.env }} --- ${{ vars.project_id }} --- ${{ vars.PROJECT_ID }}"
       # - name: test
       #   run: |
       #     echo "${{ matrix.regions }}"
