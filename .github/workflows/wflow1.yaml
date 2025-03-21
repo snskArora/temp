@@ -9,6 +9,7 @@ on:
 jobs:
   job-1:
     runs-on: ubuntu-latest
+    environment: ${{ matrix.env }}
     strategy:
       matrix:
         env: ["env1", "env2"]
